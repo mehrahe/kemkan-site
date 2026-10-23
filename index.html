@@ -4,277 +4,350 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#edf6ff">
-  <meta name="description" content="کارا تجارت امکان (KemKan)؛ تأمین مواد اولیه شیمیایی و ایجاد ارتباطات تجاری.">
+  <meta name="theme-color" content="#1239e8">
+
   <title>کارا تجارت امکان | KemKan</title>
 
+  <meta
+    name="description"
+    content="کارا تجارت امکان؛ فعال در زمینه تجارت مواد اولیه شیمیایی، پلیمری، معدنی و پتروشیمی."
+  >
+
   <style>
+    :root {
+      --blue: #1239e8;
+      --purple: #6537e8;
+      --text: #202944;
+      --muted: #667085;
+      --surface: #ffffff;
+      --background: #f5f7ff;
+      --border: #e7eaff;
+    }
+
     * {
       box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
       margin: 0;
       font-family: Tahoma, Arial, sans-serif;
-      color: #163568;
-      background: linear-gradient(135deg, #edf6ff, #ffffff, #f1eaff);
-      min-height: 100vh;
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.9;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .hero {
+      width: 100%;
+      background: linear-gradient(115deg, #3524f5, #1239e8);
+      overflow: hidden;
+    }
+
+    .hero img {
+      display: block;
+      width: 100%;
+      max-width: 1063px;
+      height: auto;
+      margin: 0 auto;
     }
 
     .container {
-      width: 92%;
-      max-width: 1000px;
-      margin: auto;
+      width: min(1100px, 92%);
+      margin: 0 auto;
     }
 
-    header {
+    .intro {
       text-align: center;
-      padding: 55px 15px 35px;
+      padding: 52px 0 36px;
     }
 
-    .logo {
-      font-family: Arial, sans-serif;
-      font-size: clamp(42px, 8vw, 76px);
-      font-weight: 900;
-      direction: ltr;
-      color: #0878e8;
-      letter-spacing: -3px;
+    .eyebrow {
+      display: inline-block;
+      color: var(--purple);
+      background: #eeebff;
+      border-radius: 30px;
+      padding: 4px 16px;
+      font-size: 13px;
+      margin-bottom: 12px;
     }
 
-    .logo span {
-      color: #7839d4;
+    h1 {
+      font-size: clamp(25px, 4vw, 36px);
+      line-height: 1.7;
+      margin: 0 0 12px;
+      color: #182b67;
     }
 
-    .company-name {
-      font-size: clamp(25px, 5vw, 42px);
-      font-weight: bold;
-      margin-top: 12px;
-      color: #174bb5;
-    }
-
-    .divider {
-      width: 110px;
-      height: 4px;
-      margin: 25px auto;
-      border-radius: 10px;
-      background: linear-gradient(to left, #7839d4, #0878e8);
-    }
-
-    .subtitle {
-      font-size: clamp(17px, 3vw, 20px);
-      line-height: 1.9;
-      margin-top: 22px;
-      color: #344f7d;
+    .intro p {
+      max-width: 760px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 16px;
     }
 
     .section-title {
       text-align: center;
-      font-size: 25px;
-      margin: 35px 0 22px;
-    }
-
-    .contacts {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 16px;
-      margin-bottom: 30px;
-    }
-
-    .contact {
-      background: white;
-      padding: 22px;
-      border-radius: 18px;
-      box-shadow: 0 8px 25px rgba(20, 76, 150, 0.10);
-      border: 1px solid #e1edff;
-      text-align: center;
-      overflow-wrap: anywhere;
-    }
-
-    .contact h3 {
-      margin: 0 0 14px;
-      font-size: 17px;
-    }
-
-    .contact a {
-      color: #0878e8;
-      text-decoration: none;
-    }
-
-    .contact a:hover {
-      color: #7839d4;
-    }
-
-    .phone {
-      display: block;
-      direction: ltr;
-      unicode-bidi: embed;
-      font-family: Arial, sans-serif;
-      font-size: clamp(17px, 2.6vw, 23px);
-      font-weight: bold;
-      margin: 12px 0;
-    }
-
-    .contact-link {
-      display: inline-block;
-      direction: ltr;
-      margin: 8px 0;
-      font-size: 16px;
-      overflow-wrap: anywhere;
+      font-size: 23px;
+      margin: 24px 0;
+      color: #182b67;
     }
 
     .features {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-      margin: 30px 0;
+      gap: 18px;
+      padding-bottom: 48px;
     }
 
     .feature {
-      padding: 25px 10px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 24px 20px;
       text-align: center;
-      color: white;
-      font-weight: bold;
+      box-shadow: 0 8px 28px rgba(25, 48, 130, 0.04);
+    }
+
+    .feature .symbol {
+      width: 46px;
+      height: 46px;
+      display: grid;
+      place-items: center;
+      margin: 0 auto 12px;
+      border-radius: 14px;
+      color: var(--blue);
+      background: #edf1ff;
+      font-size: 23px;
+    }
+
+    .feature h3 {
+      margin: 0 0 8px;
       font-size: 17px;
-      border-radius: 16px;
-      background: linear-gradient(135deg, #0878e8, #174bb5);
     }
 
-    .feature:nth-child(2) {
-      background: linear-gradient(135deg, #0878e8, #7839d4);
+    .feature p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
     }
 
-    .feature:nth-child(3) {
-      background: linear-gradient(135deg, #174bb5, #0878e8);
+    .contact-section {
+      background: #fff;
+      border-top: 1px solid var(--border);
+      padding: 38px 0 46px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    .contact-card {
+      padding: 18px 20px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: #fff;
+      min-width: 0;
+    }
+
+    .contact-label {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 5px;
+    }
+
+    .contact-value {
+      display: block;
+      direction: ltr;
+      text-align: right;
+      overflow-wrap: anywhere;
+      color: var(--blue);
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    .contact-value:hover {
+      color: var(--purple);
     }
 
     footer {
       text-align: center;
-      padding: 28px 12px;
-      color: #687d9e;
+      padding: 22px 15px;
+      color: #dce4ff;
+      background: #142c9c;
       font-size: 13px;
-      line-height: 1.8;
-      overflow-wrap: anywhere;
     }
 
     footer a {
-      color: #0878e8;
-      text-decoration: none;
-      direction: ltr;
-      display: inline-block;
+      color: #fff;
+      font-weight: 700;
     }
 
-    @media (max-width: 650px) {
-      header {
-        padding-top: 35px;
-      }
-
-      .contacts {
-        grid-template-columns: 1fr;
+    @media (max-width: 700px) {
+      .intro {
+        padding-top: 34px;
       }
 
       .features {
         grid-template-columns: 1fr;
+        gap: 12px;
       }
 
-      .contact {
-        padding: 20px 12px;
+      .feature {
+        padding: 20px;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-value {
+        font-size: 15px;
       }
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
 
-    <header>
-      <div class="logo">Kem<span>Kan</span></div>
+  <!-- بنر اصلی لوگو -->
+  <header class="hero">
+    <img
+      src="logo-banner.jpeg"
+      alt="لوگوی کارا تجارت امکان - KemKan"
+      fetchpriority="high"
+    >
+  </header>
 
-      <div class="company-name">
-        کارا تجارت امکان
-      </div>
+  <main>
+    <!-- معرفی شرکت -->
+    <section class="intro container">
+      <span class="eyebrow">KemKan | کارا تجارت امکان</span>
 
-      <div class="divider"></div>
+      <h1>تجارت آسان‌تر، ارتباطات مؤثرتر</h1>
 
-      <div class="subtitle">
-        تأمین مواد اولیه شیمیایی
-      </div>
-    </header>
-
-    <h2 class="section-title">اطلاعات تماس</h2>
-
-    <section class="contacts">
-
-      <div class="contact">
-        <h3>تلفن ثابت</h3>
-
-        <a class="phone" href="tel:+982182806205">
-          021 8280 6205
-        </a>
-
-        <a class="phone" href="tel:+982182806206">
-          021 8280 6206
-        </a>
-      </div>
-
-      <div class="contact">
-        <h3>شماره‌های موبایل</h3>
-
-        <a class="phone" href="tel:+989912110967">
-          0991 211 0967
-        </a>
-
-        <a class="phone" href="tel:+989918576618">
-          0991 857 6618
-        </a>
-      </div>
-
-      <div class="contact">
-        <h3>ایمیل</h3>
-
-        <a class="contact-link" href="mailto:info@kemkan.co">
-          info@kemkan.co
-        </a>
-      </div>
-
-      <div class="contact">
-        <h3>لینکدین</h3>
-
-        <a
-          class="contact-link"
-          href="https://linkedin.com/in/rahemeh-behgam"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          LinkedIn Profile ↗
-        </a>
-      </div>
-
+      <p>
+        کارا تجارت امکان با تمرکز بر تجارت مواد اولیه شیمیایی،
+        محصولات پلیمری، مواد معدنی و محصولات پتروشیمی،
+        در مسیر ایجاد ارتباطات تجاری مطمئن و توسعه فرصت‌های کسب‌وکار فعالیت می‌کند.
+      </p>
     </section>
 
-    <section class="features">
+    <!-- حوزه‌های فعالیت -->
+    <section class="container">
+      <h2 class="section-title">حوزه‌های فعالیت</h2>
 
-      <div class="feature">
-        پشتیبانی مطمئن
+      <div class="features">
+        <article class="feature">
+          <div class="symbol" aria-hidden="true">◈</div>
+          <h3>مواد اولیه شیمیایی</h3>
+          <p>
+            تجارت مواد اولیه و محصولات موردنیاز صنایع مختلف.
+          </p>
+        </article>
+
+        <article class="feature">
+          <div class="symbol" aria-hidden="true">◇</div>
+          <h3>پلیمرها و پوشش‌ها</h3>
+          <p>
+            مواد پلیمری، رزین‌ها و محصولات مرتبط با صنعت پوشش.
+          </p>
+        </article>
+
+        <article class="feature">
+          <div class="symbol" aria-hidden="true">◎</div>
+          <h3>مواد معدنی و پتروشیمی</h3>
+          <p>
+            توسعه ارتباطات تجاری و فرصت‌های تأمین و صادرات.
+          </p>
+        </article>
       </div>
-
-      <div class="feature">
-        تضمین کیفیت
-      </div>
-
-      <div class="feature">
-        تأمین کارآمد
-      </div>
-
     </section>
 
-    <footer>
-      <strong>Kara Tejarat Emkan</strong>
-      <br>
-      © 2026 کلیه حقوق محفوظ است.
-      <br>
-      <a href="https://kemkan.co">www.KemKan.co</a>
-    </footer>
+    <!-- تماس با ما -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <h2 class="section-title">ارتباط با ما</h2>
 
-  </div>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <span class="contact-label">تلفن دفتر</span>
+            <a class="contact-value" href="tel:+982182806205">
+              021 8280 6205
+            </a>
+          </div>
+
+          <div class="contact-card">
+            <span class="contact-label">تلفن دفتر</span>
+            <a class="contact-value" href="tel:+982182806206">
+              021 8280 6206
+            </a>
+          </div>
+
+          <div class="contact-card">
+            <span class="contact-label">تلفن همراه</span>
+            <a class="contact-value" href="tel:+989912110967">
+              0991 211 0967
+            </a>
+          </div>
+
+          <div class="contact-card">
+            <span class="contact-label">تلفن همراه</span>
+            <a class="contact-value" href="tel:+989918576618">
+              0991 857 6618
+            </a>
+          </div>
+
+          <div class="contact-card">
+            <span class="contact-label">ایمیل</span>
+            <a
+              class="contact-value"
+              href="mailto:info@kemkan.co"
+            >
+              info@kemkan.co
+            </a>
+          </div>
+
+          <div class="contact-card">
+            <span class="contact-label">وب‌سایت</span>
+            <a
+              class="contact-value"
+              href="https://kemkan.co"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              www.KemKan.co
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      © <span id="year">2026</span>
+      کارا تجارت امکان | KemKan
+    </p>
+    <a href="#contact">تماس با ما</a>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
 </body>
 </html>
