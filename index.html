@@ -1,58 +1,280 @@
+
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KemKan – Kara Tejarat Emkan</title>
+  <meta name="theme-color" content="#edf6ff">
+  <meta name="description" content="کارا تجارت امکان (KemKan)؛ تأمین مواد اولیه شیمیایی و ایجاد ارتباطات تجاری.">
+  <title>کارا تجارت امکان | KemKan</title>
+
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      color: white;
+      font-family: Tahoma, Arial, sans-serif;
+      color: #163568;
+      background: linear-gradient(135deg, #edf6ff, #ffffff, #f1eaff);
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    header {
       text-align: center;
-      background: linear-gradient(135deg, #6d28d9, #0f3557); /* Purple + Navy */
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      padding: 55px 15px 35px;
     }
-    h1 {
-      font-size: 3em;
-      margin-bottom: 10px;
+
+    .logo {
+      font-family: Arial, sans-serif;
+      font-size: clamp(42px, 8vw, 76px);
+      font-weight: 900;
+      direction: ltr;
+      color: #0878e8;
+      letter-spacing: -3px;
     }
-    p {
-      font-size: 1.2em;
+
+    .logo span {
+      color: #7839d4;
+    }
+
+    .company-name {
+      font-size: clamp(25px, 5vw, 42px);
+      font-weight: bold;
+      margin-top: 12px;
+      color: #174bb5;
+    }
+
+    .divider {
+      width: 110px;
+      height: 4px;
+      margin: 25px auto;
+      border-radius: 10px;
+      background: linear-gradient(to left, #7839d4, #0878e8);
+    }
+
+    .subtitle {
+      font-size: clamp(17px, 3vw, 20px);
+      line-height: 1.9;
+      margin-top: 22px;
+      color: #344f7d;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 25px;
+      margin: 35px 0 22px;
+    }
+
+    .contacts {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
       margin-bottom: 30px;
     }
-    .contacts {
-      margin: 20px 0;
-      font-size: 1.1em;
-      line-height: 2em;
+
+    .contact {
+      background: white;
+      padding: 22px;
+      border-radius: 18px;
+      box-shadow: 0 8px 25px rgba(20, 76, 150, 0.10);
+      border: 1px solid #e1edff;
+      text-align: center;
+      overflow-wrap: anywhere;
     }
-    a {
-      color: #ffd700; /* طلایی برای لینک */
+
+    .contact h3 {
+      margin: 0 0 14px;
+      font-size: 17px;
+    }
+
+    .contact a {
+      color: #0878e8;
       text-decoration: none;
     }
+
+    .contact a:hover {
+      color: #7839d4;
+    }
+
+    .phone {
+      display: block;
+      direction: ltr;
+      unicode-bidi: embed;
+      font-family: Arial, sans-serif;
+      font-size: clamp(17px, 2.6vw, 23px);
+      font-weight: bold;
+      margin: 12px 0;
+    }
+
+    .contact-link {
+      display: inline-block;
+      direction: ltr;
+      margin: 8px 0;
+      font-size: 16px;
+      overflow-wrap: anywhere;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin: 30px 0;
+    }
+
+    .feature {
+      padding: 25px 10px;
+      text-align: center;
+      color: white;
+      font-weight: bold;
+      font-size: 17px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #0878e8, #174bb5);
+    }
+
+    .feature:nth-child(2) {
+      background: linear-gradient(135deg, #0878e8, #7839d4);
+    }
+
+    .feature:nth-child(3) {
+      background: linear-gradient(135deg, #174bb5, #0878e8);
+    }
+
     footer {
-      position: absolute;
-      bottom: 20px;
-      font-size: 0.9em;
-      opacity: 0.7;
+      text-align: center;
+      padding: 28px 12px;
+      color: #687d9e;
+      font-size: 13px;
+      line-height: 1.8;
+      overflow-wrap: anywhere;
+    }
+
+    footer a {
+      color: #0878e8;
+      text-decoration: none;
+      direction: ltr;
+      display: inline-block;
+    }
+
+    @media (max-width: 650px) {
+      header {
+        padding-top: 35px;
+      }
+
+      .contacts {
+        grid-template-columns: 1fr;
+      }
+
+      .features {
+        grid-template-columns: 1fr;
+      }
+
+      .contact {
+        padding: 20px 12px;
+      }
     }
   </style>
 </head>
+
 <body>
-  <h1>KemKan</h1>
-  <p>Kara Tejarat Emkan – واردات و صادرات مواد شیمیایی</p>
+  <div class="container">
 
-  <div class="contacts">
-    📧 Email: <a href="mailto:info@kemkan.co">info@kemkan.co</a><br>
-    📞 Phone: <a href="tel:+989912110967">+98 991 211 0967</a><br>
-    📞 Phone: <a href="tel:+989912114178">+98 991 211 4178</a><br>
-    🔗 LinkedIn: <a href="https://linkedin.com/in/rahemeh-behgam" target="_blank">LinkedIn Profile</a>
+    <header>
+      <div class="logo">Kem<span>Kan</span></div>
+
+      <div class="company-name">
+        کارا تجارت امکان
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="subtitle">
+        تأمین مواد اولیه شیمیایی
+      </div>
+    </header>
+
+    <h2 class="section-title">اطلاعات تماس</h2>
+
+    <section class="contacts">
+
+      <div class="contact">
+        <h3>تلفن ثابت</h3>
+
+        <a class="phone" href="tel:+982182806205">
+          021 8280 6205
+        </a>
+
+        <a class="phone" href="tel:+982182806206">
+          021 8280 6206
+        </a>
+      </div>
+
+      <div class="contact">
+        <h3>شماره‌های موبایل</h3>
+
+        <a class="phone" href="tel:+989912110967">
+          0991 211 0967
+        </a>
+
+        <a class="phone" href="tel:+989918576618">
+          0991 857 6618
+        </a>
+      </div>
+
+      <div class="contact">
+        <h3>ایمیل</h3>
+
+        <a class="contact-link" href="mailto:info@kemkan.co">
+          info@kemkan.co
+        </a>
+      </div>
+
+      <div class="contact">
+        <h3>لینکدین</h3>
+
+        <a
+          class="contact-link"
+          href="https://linkedin.com/in/rahemeh-behgam"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn Profile ↗
+        </a>
+      </div>
+
+    </section>
+
+    <section class="features">
+
+      <div class="feature">
+        پشتیبانی مطمئن
+      </div>
+
+      <div class="feature">
+        تضمین کیفیت
+      </div>
+
+      <div class="feature">
+        تأمین کارآمد
+      </div>
+
+    </section>
+
+    <footer>
+      <strong>Kara Tejarat Emkan</strong>
+      <br>
+      © 2026 کلیه حقوق محفوظ است.
+      <br>
+      <a href="https://kemkan.co">www.KemKan.co</a>
+    </footer>
+
   </div>
-
-  <footer>© 2025 KemKan</footer>
 </body>
 </html>
